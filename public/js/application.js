@@ -38,16 +38,12 @@ window.onload = function () {
                 }
                 break;
             case 'win':
-                context.font = '48px serif';
-                context.fillStyle = 'red';
-                context.textAlign = 'center';
-                context.fillText('You Win!', canvas.width / 2, canvas.height / 2);
+                drawText(context, 'You Win!', '48px serif', 'red', canvas.width / 2, canvas.height / 2);
+                drawText(context, 'Press ESC', '24px serif', 'black', canvas.width / 2, canvas.height - 30);
                 break;
             case 'lose':
-                context.font = '48px serif';
-                context.fillStyle = 'blue';
-                context.textAlign = 'center';
-                context.fillText('You Lose!', canvas.width / 2, canvas.height / 2);
+                drawText(context, 'You Lose!', '48px serif', 'blue', canvas.width / 2, canvas.height / 2);
+                drawText(context, 'Press ESC', '24px serif', 'black', canvas.width / 2, canvas.height - 30);
                 break;
             default:
                 break;
@@ -116,6 +112,13 @@ function drawCircle(context, color, fillcolor, radius, coord) {
     context.strokeStyle = color;
     context.lineWidth = 2;
     context.stroke();
+}
+
+function drawText(context, text, font, color, x, y) {
+    context.font = font;
+    context.fillStyle = color;
+    context.textAlign = 'center';
+    context.fillText(text, x, y);
 }
 
 function getPos(e, mobile) {
