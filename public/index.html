@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>エアホッケー</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <h1>エアホッケー</h1>
+        <hr />
+        <p>エアホッケー風ゲーム</p>
+        <p>Enter/Returnでスタート、Escapeでリセット</p>
+    </div>
+    <div class="log">
+        <p id="log">Connecting to the server...</p>
+    </div>
+    <canvas id="myPics" width="300" height="500" style="border: 1px solid"></canvas>
+
+    <script type="text/javascript" src="js/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+</body>
+
+</html>
